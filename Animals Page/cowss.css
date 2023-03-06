@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+  background: url(bgb.jpg) no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav {
+  background: #5A5A5A;
+  width: 100%;
+  overflow: auto;
+}
+
+ul {
+  margin: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  float: right;
+}
+
+nav a {
+  width: 120px;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  font-size: 17px;
+  color: white;
+  padding: 10px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav a:hover {
+  background: green;
+}
+.c{
+  display: inline-table;
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+}
+
+.grid > article {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: lightgray;
+  border: 5px solid darkgreen;
+}
+
+.grid > article img {
+  max-height: 100%;
+  max-width: 100%;
+  width: 200px;
+  height: 200px;
+  margin-top: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+  align-items: center;
+}
+.grid > article.contact {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: lightgray;
+  border: 5px solid darkgreen;
+}
+.grid .text {
+  padding: 10px;
+  text-align: center;
+}
+.button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+.welcome{
+  text-align: center;
+  font-size: larger;
+  background: url(bgb.jpg);
+}
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>
+        <link rel="stylesheet" href="login.css">
+        <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <nav>
+        <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="signup.html">SignUp</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+        <header>
+            <a href="logo.png">
+              <img src="logo.png" alt="Logo" width="50px"height="50px">
+            </a>
+        </header>
+    </nav>
+    <body>
+        <div class="wrapper">
+        <div class="container">
+            <form onsubmit="login(); return false;">
+                <h1>Login</h1>
+                <input type="email" placeholder="Email or Username" name="email" id="email">
+                <input type="password" placeholder="Password" name="password" id="password">
+                <input type="submit" value="Log in">
+                <a href="https://web.facebook.com/login/web/?_rdc=1&_rdr" class="facebook">Log in with Facebook</a>
+                <a href="https://www.bing.com/ck/a?!&&p=e176f98f64cb4328JmltdHM9MTY3NzQ1NjAwMCZpZ3VpZD0yYmFmZTEzNC0wMjhlLTY4NGYtM2EzMy1mMGFkMDMxMzY5NjMmaW5zaWQ9NTE2OA&ptn=3&hsh=3&fclid=2bafe134-028e-684f-3a33-f0ad03136963&psq=login+with+google+linking+accounts&u=a1aHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tL0xvZ2lu&ntb=1" class="google">Log in with Google</a>
+    
+                <span></span>
+                <div class="show-password">
+                  <input type="checkbox" id="show-password-checkbox">
+                  <label for="show-password-checkbox">Show password</label>
+                  <footer>Don't have an account? <a href="signup.html" class="signup">Signup</a></footer>
+                </div>
+              </form>
+              
+              <script>
+                function login() {
+                  const email = document.getElementById("email").value;
+                  const password = document.getElementById("password").value;
+              
+                  if (email == "admin@gmail.com" && password == "admin") {
+                    window.location.href = "mainindex.html";
+                  } else {
+                    alert("Incorrect email or password");
+                  }
+                }
+              
+                const showPasswordCheckbox = document.getElementById("show-password-checkbox");
+                const passwordInput = document.querySelector('input[type="password"]');
+              
+                showPasswordCheckbox.addEventListener("click", function () {
+                  if (passwordInput.type = "password") {
+                    passwordInput.type = "text";
+                  } else {
+                    passwordInput.type = "password";
+                  }
+                });
+                function hidePassword() {
+                passwordInput.type = "password";
+              }
+
+              showPasswordCheckbox.addEventListener("change", function () {
+                if (!this.checked) {
+                  hidePassword();
+                }
+              });
+              </script>
+        </div>
+        <p style="position: fixed; bottom: 0; width: 100%; text-align: center;">© All Right Reserved Dream Farm</p>
+    </body>
+</html>
